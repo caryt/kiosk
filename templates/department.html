@@ -1,0 +1,25 @@
+{% extends "layout.html" %}
+{% block body %}
+  <h2>{{dept_name}}</h2>
+  Displaying Employees {{(page-1)*size+1}}-{{page*size+1}} of {{total}}
+  {% if page>1 %}<a href="{{page-1}}">&lt; Prev</a>{% endif %}
+  <a href="{{page+1}}">Next &gt;</a>
+  <table class="table">
+    <tr>
+      <th>First Name</th>
+      <th>Last Name</th>
+      <th>Gender</th>
+      <th>Job Title</th>
+      <th>Salary</th>
+    </tr>
+    {% for emp in employees %}
+    <tr>
+      <td><a href='emp/{{emp.emp_no}}'>{{emp.first_name}}</a></td>
+      <td>{{emp.last_name}}</td>
+      <td>{{emp.gender}}</td>
+      <td>{{emp.job_title}}</td>
+      <td>${{emp.salary}}</td>
+    </tr>
+    {% endfor %}
+  </table>
+{% endblock %}

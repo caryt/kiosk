@@ -1,0 +1,38 @@
+{% extends "layout.html" %}
+{% block body %}
+  <h2>{{emp.first_name}} {{emp.last_name}}</h2>
+  <form role="form">
+    <div class="form-group">
+      <label for="gender">Gender</label>
+      <input class="form-control" disabled type="text" id="gender" value="{{emp.gender}}"</input>
+    </div>
+    <div class="form-group">
+      <label for="dept_name">Current Department</label>
+      <input class="form-control" disabled type="text" id="dept_name" value="{{emp.dept_name}}"></input>
+    </div>
+    <div class="form-group">
+      <label for="job_title">Current Job Title</label>
+      <input class="form-control" disabled type="text" id="job_title" value="{{emp.job_title}}"</input>
+    </div>
+    <div class="form-group">
+      <label for="hire_date">Hire Date</label>
+      <input class="form-control" disabled type="text" id="hire_date" value="{{emp.hire_date}}"</input>
+    </div>
+    <div class="form-group">
+      <label for="years_with_company">Years with Company</label>
+      <input class="form-control" disabled type="text" id="years_with_company" value="{{emp.years_with_company}}"</input>
+    </div>
+    <div class="form-group">
+      <label for="birth_date">Birth Date</label>
+      <input class="form-control" disabled type="text" id="birth_date" value="{{emp.birth_date}}"</input>
+    </div>
+    <div class="form-group">
+      <label for="age">Age</label>
+      <input class="form-control" disabled type="text" id="age" value="{{emp.age}}"</input>
+    </div>
+    <div class="form-group">
+      <label for="salary">Current Salary</label>
+      <input class="form-control" disabled type="text" id="salary" value="${{emp.salary}}"</input>
+    </div>
+  </form>
+{% endblock %}
